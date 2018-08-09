@@ -11,25 +11,25 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
-// for(var key in values) {
-//   console.log(values[key])
-// }
+for(var key in values) {
+  console.log(values[key])
+}
 
 /*
   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// for(var key in values) {
-//   console.log(key)
-// }
+for(var key in values) {
+  console.log(key)
+}
 
 
 
@@ -40,10 +40,12 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  let newsrt = ""
+  for(let key in obj){
+    newsrt += obj[key]
+  }
+  return newsrt
 }
-
-
 
 ////////// PROBLEM 2 //////////
 
@@ -53,7 +55,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj){
+  for(let key in obj){
+    if(obj[key] > 10 ){
+      obj[key] = 0
+    }
+  }
+  return obj;
+}
 
 
 
@@ -65,7 +74,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function double(obj){
+  for(let key in obj){
+    obj[key] *= 2
+  }
+  return obj;
+}
 
 
 
@@ -79,7 +93,15 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+// function secrets(obj){
+//   let newString = ""
+//   for(let key in obj){
+//     if(obj[key] == "sh"){
+//       obj[key] + "sh"
+//     }
+//   }
+//   return  
+// }
 
 
 
